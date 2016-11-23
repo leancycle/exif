@@ -1,2 +1,2 @@
-# exif
+# exif-app
 Exchangeable image file format

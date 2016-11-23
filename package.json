@@ -8,15 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leancycle/exif.git"
+    "url": "git+https://github.com/leancycle/exif-app.git"
   },
   "author": "Oscar Fraxedas <fraxedas@gmail.com> (https://github.com/fraxedas)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/leancycle/exif/issues"
+    "url": "https://github.com/leancycle/exif-app/issues"
   },
-  "homepage": "https://github.com/leancycle/exif#readme",
+  "homepage": "https://github.com/leancycle/exif-app#readme",
   "dependencies": {
+    "exif": "^0.6.0",
     "express": "^4.14.0"
   }
 }

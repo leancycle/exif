@@ -2,9 +2,20 @@ var express = require('express')
 var app = express()
 
 app.get('/', function (req, res) {
-  res.send('Hello World!')
+  var ExifImage = require('exif').ExifImage;
+
+  try {
+    new ExifImage({ image: 'photo.jpg' }, function (error, exifData) {
+      if (error)
+        res.status(500).send('Error: ' + error.message);
+      else
+        res.header('Content-Type', 'application/json').send(exifData);
+    });
+  } catch (error) {
+    res.status(500).send('Error: ' + error.message);
+  }  
 })
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log('Example app listening on port 3000!')
 })

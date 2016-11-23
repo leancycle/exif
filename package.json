@@ -1,0 +1,22 @@
+{
+  "name": "exif-app",
+  "version": "1.0.0",
+  "description": "Exchangeable image file format",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leancycle/exif.git"
+  },
+  "author": "Oscar Fraxedas <fraxedas@gmail.com> (https://github.com/fraxedas)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leancycle/exif/issues"
+  },
+  "homepage": "https://github.com/leancycle/exif#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

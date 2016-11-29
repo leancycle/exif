@@ -4,16 +4,12 @@ var app = express()
 app.get('/', function (req, res) {
   var ExifImage = require('exif').ExifImage;
 
-  try {
-    new ExifImage({ image: 'photo.jpg' }, function (error, exifData) {
-      if (error)
-        res.status(500).send('Error: ' + error.message);
-      else
-        res.header('Content-Type', 'application/json').send(exifData);
-    });
-  } catch (error) {
-    res.status(500).send('Error: ' + error.message);
-  }  
+  new ExifImage({ image: 'photo.jpg' }, function (error, exifData) {
+    if (error)
+      res.status(500).send('Error: ' + error.message);
+    else
+      res.header('Content-Type', 'application/json').send(exifData);
+  });
 })
 
 app.listen(process.env.PORT || 3000, function () {
